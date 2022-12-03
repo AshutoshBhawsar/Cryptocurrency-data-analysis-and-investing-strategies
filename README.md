@@ -1,7 +1,22 @@
 # Cryptocurrency-data-analysis-and-investing-strategies
-DIC Project Fall 2022, State University of New York at Buffalo
+DIC Project Fall 2022, State University of New York at Buffalo, Prof. Eric Mikida.
 
 Data Source : https://www.kaggle.com/datasets/mczielinski/bitcoin-historical-data
+
+# Prerequisites:
+Please install following packages before running any code-
+1. pandas
+2. numpy
+3. matplotlib
+4. seaborn
+5. plotly
+6. sklearn
+7. keras
+8. pystan 2.19
+9. fbprophet
+10. prophet
+11. joblib
+12. streamlit
 
 # Phase 1 Steps:
 1. Extract the Bitcoin dataset from above given link.
@@ -16,7 +31,7 @@ Data Source : https://www.kaggle.com/datasets/mczielinski/bitcoin-historical-dat
 
 
 # Phase 2 Steps-
-1. Under the code foler, open the file - phase2.ipynb, first change the path for bitcoin_daily_data_cleaned.csv and give the correcsponding path of where the file is located in your machine.
+1. Under the code foler, open the file - phase2.ipynb, first change the path for 'bitcoin_daily_data_cleaned.csv' and give the correcsponding path of where the file is located in your machine.
 2. Now run the file phase2.ipynb.
 3. Each section of code contains models which are used to train the data set for the purpose of either classification or regression. Then the test data is run on the trained model and prediction is done.
 4. In the output various visualisation graphs for the models can be viewed.
@@ -24,6 +39,7 @@ Data Source : https://www.kaggle.com/datasets/mczielinski/bitcoin-historical-dat
 
 # Phase 3 steps-
 1. For the phase3 install and setup streamlit - https://docs.streamlit.io/library/get-started/installation
-2. Under the code folder run the file phase3.py
-3. In the webpage that is displayed, for Random Forest model the user can select any date. The model will run and output the user a decision of whether the user can buy or sell the stock on the selected date. User can also view the graph for that date.
-4. The next part is the Prophet model for the which user can select and date and in the output he can view the predicted stock price, Upper most bound of the predicted stock price and lower most bound. 
+2. Under the code folder run the file phase3.py by running command 'streamlit run phase3.py' in terminal.
+3. If the webapp window does not open automatically, run 'http://localhost:8501' in your browser to access the app.
+4. In the webpage that is displayed, for Random Forest model the user can select any date. The model will run and output the user a decision of whether the user can buy or sell the stock on the selected date. User can also view the graph for that date.
+5. The next part is the Prophet model for the which user can select and date and in the output he can view the predicted stock price, Upper most bound of the predicted stock price and lower most bound. 
