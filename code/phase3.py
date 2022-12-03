@@ -99,7 +99,7 @@ else:
         portfolio_value = usd_price_start * number_of_coins
         
         # Printing out initial portfolio value
-        st.markdown(f"**Your initial portfolio value on {start_date} is \${portfolio_value}**")
+        st.markdown(f"**Your initial portfolio value on {start_date} is \${(portfolio_value).round(2)}**")
 
         # Getting model output for the given liquidation date
         forecasting.ds = pd.to_datetime(forecasting.ds).dt.date
@@ -116,7 +116,7 @@ else:
         st.info(predicted_vals.yhat_lower.values[0] * number_of_coins)
 
         # Output message from model to determine trading strategy
-        st.markdown(f"**Your portfolio of {number_of_coins} BTC can have maximum equity of \${predicted_vals.yhat_upper.values[0].round(2)} and minimum equity of \${predicted_vals.yhat_lower.values[0].round(2)} on {string_date}**")
+        st.markdown(f"**Your portfolio of {number_of_coins} BTC can have maximum equity of \${(predicted_vals.yhat_upper.values[0] * number_of_coins).round(2)} and minimum equity of \${(predicted_vals.yhat_lower.values[0] * number_of_coins).round(2)} on {string_date}**")
 
         # Printing interactive output graph of prophet model for better insights on time series
         fig2 = plot_plotly(prophet_model, forecasting)
